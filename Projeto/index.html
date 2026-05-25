@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro de Estudos - Programação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <nav class="tabs-navigation">
+            <button class="tab-btn active" data-tab="javascript">JavaScript</button>
+            <button class="tab-btn" data-tab="python">Python</button>
+            <button class="tab-btn" data-tab="c">Linguagem C</button>
+            <button class="tab-btn" data-tab="cpp">C++</button>
+        </nav>
+
+        <div class="tabs-content">
+            
+            <div class="tab-panel active" id="javascript">
+                <h2>Meta: Dominar JavaScript</h2>
+                <p class="deadline-date">Prazo final: 15 de Junho de 2026</p>
+                <div class="countdown" id="timer-javascript">
+                    <div class="time-box"><span class="days">00</span><label>Dias</label></div>
+                    <div class="time-box"><span class="hours">00</span><label>Horas</label></div>
+                    <div class="time-box"><span class="minutes">00</span><label>Minutos</label></div>
+                    <div class="time-box"><span class="seconds">00</span><label>Segundos</label></div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="python">
+                <h2>Meta: Dominar Python</h2>
+                <p class="deadline-date">Prazo final: 15 de Julho de 2026</p>
+                <div class="countdown" id="timer-python">
+                    <div class="time-box"><span class="days">00</span><label>Dias</label></div>
+                    <div class="time-box"><span class="hours">00</span><label>Horas</label></div>
+                    <div class="time-box"><span class="minutes">00</span><label>Minutos</label></div>
+                    <div class="time-box"><span class="seconds">00</span><label>Segundos</label></div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="c">
+                <h2>Meta: Dominar Linguagem C</h2>
+                <p class="deadline-date">Prazo final: 20 de Outubro de 2026</p>
+                <div class="countdown" id="timer-c">
+                    <div class="time-box"><span class="days">00</span><label>Dias</label></div>
+                    <div class="time-box"><span class="hours">00</span><label>Horas</label></div>
+                    <div class="time-box"><span class="minutes">00</span><label>Minutos</label></div>
+                    <div class="time-box"><span class="seconds">00</span><label>Segundos</label></div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="cpp">
+                <h2>Meta: Dominar C++</h2>
+                <p class="deadline-date">Prazo final: 31 de Dezembro de 2026</p>
+                <div class="countdown" id="timer-cpp">
+                    <div class="time-box"><span class="days">00</span><label>Dias</label></div>
+                    <div class="time-box"><span class="hours">00</span><label>Horas</label></div>
+                    <div class="time-box"><span class="minutes">00</span><label>Minutos</label></div>
+                    <div class="time-box"><span class="seconds">00</span><label>Segundos</label></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

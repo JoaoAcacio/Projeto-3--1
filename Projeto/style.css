@@ -1,0 +1,142 @@
+/* Reset básico e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #12072B; /* Roxo Escuro */
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Container Principal (80% da tela) */
+.main-container {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #1D0F3D; /* Roxo intermediário para contraste */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Menu de Abas */
+.tabs-navigation {
+    display: flex;
+    background-color: #170A32;
+    border-bottom: 2px solid #2C165C;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 20px;
+    background: none;
+    border: none;
+    color: #A395CC;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.tab-btn:hover {
+    color: #FFFFFF;
+    background-color: #23124D;
+}
+
+.tab-btn.active {
+    color: #00FFCC; /* Destaque em tom ciano/neon */
+    background-color: #1D0F3D;
+    border-bottom: 3px solid #00FFCC;
+}
+
+/* Conteúdo das Abas */
+.tabs-content {
+    padding: 40px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab-panel {
+    display: none;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.deadline-date {
+    color: #A395CC;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Grid do Cronômetro */
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.time-box {
+    background-color: #25144E;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid #361D70;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.time-box span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00FFCC;
+    margin-bottom: 5px;
+}
+
+.time-box label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #A395CC;
+    letter-spacing: 1px;
+}
+
+/* Animação suave de transição */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade simples para telas menores */
+@media (max-width: 768px) {
+    .main-container {
+        width: 95%;
+    }
+    .tabs-navigation {
+        flex-direction: column;
+    }
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
